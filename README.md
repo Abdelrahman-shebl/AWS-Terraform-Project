@@ -1,8 +1,7 @@
-# AWS-Terraform-Project
-
 # AWS Infrastructure Setup with Terraform
 
-![Architecture Diagram](./c571d454-07db-4281-9e04-f39b276a75c8.png)
+![Architecture Diagram] ![image](https://github.com/user-attachments/assets/033029c2-5b53-49fa-ae5c-fdb5149d06e0)
+
 
 ## 🚀 Project Overview
 
@@ -59,3 +58,46 @@ This project provisions a highly available AWS infrastructure using **Terraform*
 ├── vpc.tf
 ├── README.md
 └── architecture_diagram.png (this image)
+
+## ⚙️ How to Use
+
+### Clone the repo:
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+## ⚙️ Initialize Terraform
+
+```bash
+terraform init
+
+## 📋 Plan the Deployment
+
+```bash
+terraform plan
+
+## 🚀 Apply the Configuration
+
+```bash
+terraform apply
+
+## 🌐 Access
+
+- Use **SSH** to connect to the **Jump server**.
+- Access the **web servers** via the **Load Balancer DNS name**.
+
+## 🔐 Security Considerations
+
+- Jump server restricted to **SSH (port 22)**.
+- Web servers allow only **HTTP (port 80)**.
+- Private instances access the internet via a **NAT Gateway**, not directly through the **Internet Gateway (IGW)**.
+- **S3 Bucket** access is restricted via **IAM roles**.
+
+## 📋 Notes
+
+- Update your **SSH key** at `Jump.pub` before deployment.
+- Ensure your **AWS credentials** are configured locally.
+- Modify the **region** or **instance types** in `variables.tf` if needed.
+
+
