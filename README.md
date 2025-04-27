@@ -59,45 +59,45 @@ This project provisions a highly available AWS infrastructure using **Terraform*
 ├── README.md
 └── architecture_diagram.png (this image)
 
-## ⚙️ How to Use
-
-### Clone the repo:
-
-```bash
+⚙️ How to Use
+Clone the repo:
+bash
+Copy
+Edit
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-
-## ⚙️ Initialize Terraform
-
-```bash
+⚙️ Initialize Terraform
+bash
+Copy
+Edit
 terraform init
-
-## 📋 Plan the Deployment
-
-```bash
+📋 Plan the Deployment
+bash
+Copy
+Edit
 terraform plan
-
-## 🚀 Apply the Configuration
-
-```bash
+🚀 Apply the Configuration
+bash
+Copy
+Edit
 terraform apply
+🌐 Access
+Use SSH to connect to the Jump server.
 
-## 🌐 Access
+Access the web servers via the Load Balancer DNS name.
 
-- Use **SSH** to connect to the **Jump server**.
-- Access the **web servers** via the **Load Balancer DNS name**.
+🔐 Security Considerations
+Jump server restricted to SSH (port 22).
 
-## 🔐 Security Considerations
+Web servers allow only HTTP (port 80).
 
-- Jump server restricted to **SSH (port 22)**.
-- Web servers allow only **HTTP (port 80)**.
-- Private instances access the internet via a **NAT Gateway**, not directly through the **Internet Gateway (IGW)**.
-- **S3 Bucket** access is restricted via **IAM roles**.
+Private instances access the internet via a NAT Gateway, not directly through the Internet Gateway (IGW).
 
-## 📋 Notes
+S3 Bucket access is restricted via IAM roles.
 
-- Update your **SSH key** at `Jump.pub` before deployment.
-- Ensure your **AWS credentials** are configured locally.
-- Modify the **region** or **instance types** in `variables.tf` if needed.
+📋 Notes
+Update your SSH key at Jump.pub before deployment.
 
+Ensure your AWS credentials are configured locally.
 
+Modify the region or instance types in variables.tf if needed
