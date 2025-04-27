@@ -60,15 +60,10 @@ This project provisions a highly available AWS infrastructure using **Terraform*
 └── architecture_diagram.png (this image)
 
   
-
 ## ⚙️ How to Use
 
-1. 1.  **Clone the repo:**
-1.     
-
-bash
-
-CopyEdit
-
-`git clone https://github.com/your-username/your-repo-name.git cd your-repo-name`
+### 1. Clone the repo:
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 
