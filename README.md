@@ -58,6 +58,7 @@ This project provisions a highly available AWS infrastructure using **Terraform*
 ├── vpc.tf
 ├── README.md
 └── architecture_diagram.png (this image)
+
 ---
 
 can you convert this to readme format
