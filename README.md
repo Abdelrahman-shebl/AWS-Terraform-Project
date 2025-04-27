@@ -1,6 +1,6 @@
 # AWS Infrastructure Setup with Terraform
 
-![Architecture Diagram] ![image](https://github.com/user-attachments/assets/033029c2-5b53-49fa-ae5c-fdb5149d06e0)
+# [Architecture Diagram] ![image](https://github.com/user-attachments/assets/033029c2-5b53-49fa-ae5c-fdb5149d06e0)
 
 
 ## 🚀 Project Overview
