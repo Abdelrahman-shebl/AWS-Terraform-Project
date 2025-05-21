@@ -58,4 +58,63 @@ This project provisions a highly available AWS infrastructure using **Terraform*
 ├── vpc.tf
 ├── README.md
 └── architecture_diagram.png (this image)
+```
+---
 
+## 🚦 How to Use This Terraform Project
+Follow these steps to deploy and manage the infrastructure using Terraform:
+
+### 🔐 AWS Configuration
+Before proceeding, configure your AWS credentials:
+
+```bash
+aws configure
+```
+You'll need to provide:
+- AWS Access Key ID
+- AWS Secret Access Key
+- Default region name
+- Default output format
+
+### 🔑 SSH Key Setup
+Modify `key_pair.tf` to use your own public key:
+1. Open `key_pair.tf` in a text editor
+2. Replace the `public_key` value with your own public key path:
+```hcl
+resource "aws_key_pair" "ec2_key" {
+  key_name   = "ec2"
+  public_key = file("path/to/public_key")  # ← Update this
+}
+```
+
+### 1️⃣ Initialize the Project
+Make sure [Terraform is installed](https://developer.hashicorp.com/terraform/downloads), then initialize the working directory:
+
+```bash
+terraform init
+```
+
+### 2️⃣ Preview the Execution Plan
+Check what resources Terraform will create, update, or destroy without making any changes:
+
+```bash
+terraform plan
+```
+
+This helps you verify and review the proposed changes before applying them.
+
+### 3️⃣ Apply the Configuration
+Create or update infrastructure as defined in the .tf files:
+
+```bash
+terraform apply
+```
+
+You will be prompted to confirm the action. Type `yes` to proceed.
+
+### 4️⃣ (Optional) Destroy the Infrastructure
+If you want to tear down and remove all resources provisioned by this Terraform project:
+
+```bash
+terraform destroy
+```
